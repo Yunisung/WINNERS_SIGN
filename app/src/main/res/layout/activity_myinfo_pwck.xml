@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="624"
+    tools:context=".mbinfo.MyInfoPwCkActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="494"
+        
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="52"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:onClick="back"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/top_back" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="나의 정보"
+                android:textColor="@color/title"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="440"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="307dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="bottom"
+                    android:text="비밀번호 재확인"
+                    android:textColor="@color/title"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/icon_help"
+                    android:onClick="onClickHelp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="bottom"
+                android:lineSpacingExtra="5dp"
+                android:text="회원님의 소중한 정보보호를 위해 비밀번호를 재확인하고 있습니다."
+                android:textColor="@color/text_03"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="212dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="63dp"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/login_input"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@drawable/person" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mb_id"
+                        android:layout_width="254dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:paddingLeft="9dp"
+                        android:text="아이디를 입력하세요"
+                        android:textColor="@color/input_color"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/login_input"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:src="@drawable/lock" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/pw"
+                        android:layout_width="254dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:ems="10"
+                        android:hint="비밀번호를 입력하세요."
+                        android:inputType="textPassword"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:paddingLeft="9dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="130"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="317dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/login_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="비밀번호가 기억나지 않으세요?"
+                android:textColor="@color/text_03"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="goFindPwFrm"
+                android:text="@string/info_pwck_frm"
+                android:textColor="@color/titlecolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:onClick="goUpdateInfo"
+                android:src="@drawable/go_contract_btn" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

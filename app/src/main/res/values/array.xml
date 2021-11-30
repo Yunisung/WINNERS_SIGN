@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="li_sv_divide">
+        <item>선택</item>
+        <item>신용카드</item>
+        <item>가상계좌</item>
+        <item>계좌이체</item>
+        <item>휴대폰결제</item>
+    </string-array>
+
+    <string-array name="bank">
+        <item>은행명 선택</item>
+        <item>농협</item>
+        <item>신한</item>
+        <item>국민</item>
+        <item>IBK기업</item>
+        <item>카카오뱅크</item>
+        <item>하나</item>
+        <item>우리</item>
+        <item>국민</item>
+        <item>SC제일</item>
+        <item>대구</item>
+        <item>부산</item>
+        <item>광주</item>
+        <item>새마을</item>
+        <item>경남</item>
+        <item>전북</item>
+        <item>제주</item>
+        <item>산업</item>
+        <item>우체국</item>
+        <item>신협</item>
+        <item>수협</item>
+        <item>씨티</item>
+        <item>케이뱅크</item>
+        <item>도이치</item>
+        <item>BOA</item>
+        <item>BNP</item>
+        <item>중국공상</item>
+        <item>HSBC</item>
+        <item>JP모간</item>
+        <item>산림조합</item>
+        <item>저축은행</item>
+        <item>교보증권</item>
+        <item>대신증권</item>
+        <item>동부증권</item>
+        <item>카카오페이증권</item>
+        <item>메리츠</item>
+        <item>미래에셋대우</item>
+        <item>부국증권</item>
+        <item>삼성증권</item>
+        <item>신영증권</item>
+        <item>신한금융</item>
+        <item>유진투자</item>
+        <item>유안타</item>
+        <item>이베스트</item>
+        <item>케이프투자</item>
+        <item>키움증권</item>
+        <item>한국포스증권</item>
+        <item>NH투자</item>
+        <item>하나금융</item>
+        <item>하이투자</item>
+        <item>한국투자</item>
+        <item>한화투자</item>
+        <item>현대차증권</item>
+        <item>KB증권</item>
+        <item>KTB투자</item>
+        <item>SK증권</item>
+    </string-array>
+
+
+
+
+</resources>
+

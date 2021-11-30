@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF212858</color>
+    <color name="teal_700">#FF495efa</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+	<color name="title">#FF344356</color> <!--진한색-->
+	<color name="text_02">#FF212858</color>
+	<color name="text_03">#FF030306</color>
+	<color name="input_color">#FF7f83a0</color>  <!--연한색-->
+	<color name="background_01">#FFf3f5f9</color>
+    <color name="info_background">#FFfafafa</color>
+    <color name="non_white">#26FFFFFF</color>
+    <color name="maincolor">#FF2699FB</color>
+    <color name="titlecolor">#FF34A9F4</color>
+    <color name="menuline1">#FF047BF4</color>
+    <color name="menuline2">#FF32A7F4</color>
+    <color name="menuline3">#FFF3F3F3</color>
+    <color name="menulogout">#FFCCCCCC</color>
+    <!-- 커스텀색상
+    toptextcolor = 상단 바에 있는 글자 색
+    infocolor = 계약서 작성시 정보 표시 색
+    -->
+    <color name="toptextcolor">#FF344356</color>
+    <color name="infocolor">#FF7f83a0</color>
+    <color name="join_background">#F3F5F9</color>
+    <color name="input_bg">#ebedf8</color>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".find.FindPwFinishActivity"
+    android:weightSum="624">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="494"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="52"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:onClick="back"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/top_back"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="비밀번호 변경"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0DB1B2" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#1ADBDC" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="440"
+            android:orientation="vertical"
+            android:paddingTop="111dp"
+            android:paddingBottom="181dp"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="148dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/graphics_check"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="39dp"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:text="비밀번호 변경 완료"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:text="고객님의 비밀번호가 변경되었습니다."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="130"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="16.04dp"
+                android:layout_height="16dp"
+                android:src="@drawable/login_info"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:text="이용을 위해서는 로그인이 필요합니다."
+                android:textSize="13sp"
+                android:textColor="#999999"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <ImageView
+                android:onClick="goLoginFrm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_login_long"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

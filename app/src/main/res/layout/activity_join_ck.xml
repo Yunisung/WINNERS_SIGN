@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FAFAFA"
+    android:orientation="vertical"
+    android:weightSum="624"
+    tools:context=".join.JoinCkActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="534"
+
+        android:background="@color/join_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="534">
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="0dp"
+            android:layout_weight="52"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:onClick="back"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/top_back" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="회원가입"
+                android:textColor="@color/title"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="480"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="307dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:paddingTop="20dp"
+                    android:text="이용약관 동의"
+                    android:textColor="@color/title"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:paddingTop="20dp"
+                    android:layout_width="21dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icon_help"
+                    android:onClick="onClickHelp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="328dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center|center_vertical"
+                android:gravity="top"
+                android:letterSpacing="-0.01"
+                android:paddingTop="6dp"
+                android:text="서비스 이용을 위해 개인정보 수집 및 이용에 동의해주세요."
+                android:textColor="@color/title"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="328dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/ckAll"
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:button="@null"
+                        android:drawableLeft="@drawable/join_selectbox_ck_all"
+                        android:gravity="center_vertical"
+                        android:onClick="ckAll"
+                        android:text="   모두 확인하였으며 동의합니다."
+                        android:textColor="@color/title"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#666b8c" />
+
+                <LinearLayout
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cc1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/join_selectbox_ck"
+                            android:onClick="clickCk"
+                            android:text="   이용약관 동의 [필수]"
+                            android:textColor="@color/title"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:id="@+id/a1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:onClick="goPopup"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="6dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/btn_arrow_right" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp">
+
+                        <WebView
+                            android:id="@+id/joinWeb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </WebView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/join_selectbox_ck"
+                            android:onClick="clickCk"
+                            android:text="   개인정보 수집 및 이용동의 [필수]"
+                            android:textColor="@color/title"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:id="@+id/a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:onClick="goPopup"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="6dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/btn_arrow_right" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp">
+
+                        <WebView
+                            android:id="@+id/joinWeb2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></WebView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cc3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/join_selectbox_ck"
+                            android:onClick="clickCk"
+                            android:text="   마케팅 정보 동의 [선택]"
+                            android:textColor="@color/title"
+                            android:textSize="13sp" />
+
+                        <LinearLayout
+                            android:id="@+id/a3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:onClick="goPopup"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="6dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/btn_arrow_right" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp">
+
+                        <WebView
+                            android:id="@+id/joinWeb3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></WebView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:background="@color/background_01"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:onClick="goJoinInputFrm"
+            android:src="@drawable/btn_go_join_input" />
+    </LinearLayout>
+    </LinearLayout>

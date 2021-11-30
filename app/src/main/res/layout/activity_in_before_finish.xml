@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contract.In_Before_FinishActivity"
+    android:orientation="vertical"
+    android:weightSum="624"
+    android:background="@drawable/background_color">
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_weight="53"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:onClick="back"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/top_back"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="[개인] 계약서 작성"
+            android:textColor="@color/title"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:onClick="didTapContractHome"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/top_home"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="571"
+        android:orientation="vertical"
+        
+        android:weightSum="571">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="482"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center|top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="307dp"
+                            android:layout_height="61dp"
+                            android:paddingTop="25dp"
+                            android:text="서비스 제공회사 (갑)"
+                            android:textSize="16sp"
+                            android:textColor="@color/title" />
+
+                        <ImageView
+                            android:paddingTop="13dp"
+                            android:layout_width="21dp"
+                            android:layout_height="61dp"
+                            android:src="@drawable/icon_help"
+                            android:onClick="onClickHelp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="36dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_company" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="회사명" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/sv_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_rate" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="서비스 이용 수수료" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/sv_charge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_num" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="사업자등록번호" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/sv_bs_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_calendar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="정산주기" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/sv_calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_card" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="결제수단" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_terminal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="328dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:textColor="@color/title"
+                        android:textSize="16sp"
+                        android:text="개인간 거래 신청자 (을)"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_name" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="성명" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_id" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="아이디" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_admin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_store_name" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="상호명" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_tel" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="연락처" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_num" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="주민등록번호" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_rrn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_business" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="판매품목" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_address" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="우편번호" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/zipcode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_address" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="기본주소" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/addr1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_address" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="상세주소" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/addr2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_mobile" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="사업장 연락처" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_tel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="328dp"
+                        android:layout_height="61dp"
+                        android:gravity="center|left"
+                        android:textColor="@color/title"
+                        android:textSize="16sp"
+                        android:text="첨부서류"/>
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="154dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/line_all_input_show"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="  신분증"
+                                android:textSize="13dp"
+                                android:textColor="@color/input_color"/>
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="2dp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="154dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/line_all_input_show"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="  통장사본"
+                                android:textSize="13sp"
+                                android:textColor="@color/input_color"/>
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="2dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="61dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:textColor="@color/title"
+                            android:textSize="16sp"
+                            android:text="정산계좌 정보"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/input_color"
+                            android:textSize="10sp"
+                            android:text="  (송금의뢰 수수료 500원 발생) "
+                            android:gravity="center|left"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_bank" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:textColor="@color/title"
+                                    android:text="은행명" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_bank_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_account_num" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:textColor="@color/title"
+                                    android:text="계좌번호" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_bank_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_user_num" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:textColor="@color/title"
+                                    android:text="예금주" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/in_depositor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_marginTop="21dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="※ 본 서비스는 여신전문금융업법 제 19조에 의거 결제대행업체에서 제공되는 전자지불대행서비스이며, 본계약으로 발생된 매출은 개인 간 거래 신청자('을')에게 매출 신고 및 납세의 의무가 있습니다.\n\n※ 개인 간 거래 신청자('을')는 본 서비스를 이용하여 매출누락 등 조세법 위반 시 위 계약은 자동 해지되며, 전표 유통, 현금유통, 카드깡 등 불법적으로 사용시 모든 손해배상 및 민·형사상의 책임이 있습니다."
+                                android:lineSpacingExtra ="2dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/input_color"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="29dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="171dp"
+                        android:orientation="vertical"
+                        android:background="#F5F5F5"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="328dp"
+                            android:layout_height="131dp"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:weightSum="2">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:text="날    짜"
+                                    android:textColor="@color/title"
+                                    android:textSize="13sp"
+                                    android:gravity="center|left"/>
+                                <TextView
+                                    android:id="@+id/in_wdate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center|right"
+                                    android:textColor="@color/input_color"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:orientation="horizontal"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/title"
+                                    android:text="신청인"
+                                    android:gravity="center|left"/>
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:weightSum="2">
+                                    <TextView
+                                        android:id="@+id/signName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/input_color"
+                                        android:textSize="13sp"
+                                        android:gravity="center|right"/>
+                                    <ImageView
+                                        android:id="@+id/img3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center|right"/>
+                                </LinearLayout></LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:orientation="horizontal"
+                                android:layout_weight="0"
+                                android:visibility="gone">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/title"
+                                    android:layout_height="match_parent"
+                                    android:text="담당자"
+                                    android:gravity="center|left"/>
+                                <TextView
+                                    android:id="@+id/in_agent"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/input_color"
+                                    android:textSize="13sp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|right"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="92"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:onClick="goFinishFrm"
+                android:src="@drawable/contract_btn_finish" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

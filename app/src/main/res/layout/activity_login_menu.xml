@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    android:weightSum="640"
+    tools:context=".LoginMenuActivity">
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="400"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="38dp"
+                android:layout_gravity="left"
+                android:src="@drawable/profile"
+                app:srcCompat="@drawable/logo_main" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|left"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="홍길동님"
+                    android:textColor="@color/text_03"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="반갑습니다."
+                    android:textColor="@color/text_03"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_weight="60"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="157dp"
+            android:layout_height="133dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/toggle_contract_li"
+            android:onClick="writeLiContract" />
+
+        <ImageButton
+            android:id="@+id/in_contract1"
+            android:layout_width="157dp"
+            android:layout_height="133dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/toggle_contract_in"
+            android:onClick="writeInContract" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_weight="130"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/toggle_mycon_li"
+            android:onClick="goMyLiContractFrm" />
+
+        <ImageButton
+            android:id="@+id/btn_main_2"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/toggle_mycon_in"
+            android:onClick="goMyInContractFrm"
+            android:paddingRight="14dp" />
+
+        <ImageButton
+            android:id="@+id/btn_main_3"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:layout_gravity="top"
+            android:background="@drawable/toggle_marupay"
+            android:onClick="goMaruPay" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c5c5c5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:layout_weight="40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="goMyInfoFrm"
+            android:src="@drawable/btn_edit" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="logout"
+            android:src="@drawable/btn_logout" />
+    </LinearLayout>
+
+</LinearLayout>
+

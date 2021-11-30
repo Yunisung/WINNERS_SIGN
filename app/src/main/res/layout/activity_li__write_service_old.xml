@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contract.Li_WriteServiceActivity"
+    android:weightSum="624"
+    android:background="@drawable/background_color">
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_weight="53"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:onClick="back"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/top_back"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="[사업자] 계약서 작성"
+            android:textColor="@color/toptextcolor"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:onClick="didTapContractHome"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/top_home" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="571"
+        android:orientation="vertical"
+        
+        android:weightSum="571">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="482"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="307dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:text="서비스 신청 정보"
+                            android:textColor="#344356"
+                            android:textSize="16sp"
+                            android:layout_gravity="center"
+                            android:letterSpacing="0.05"
+                            android:paddingTop="3dp"
+                            android:fontFamily="@font/notosanskr"/>
+
+                        <ImageView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:layout_gravity="bottom"
+                            android:src="@drawable/icon_help"
+                            android:onClick="onClickHelp"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingRight="36dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+							android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_rate" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center|left"
+                                    android:text="서비스 이용 수수료" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/li_sv_charge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text="@string/chargeString"
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="left"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="160dp"
+                                android:layout_height="match_parent"
+								android:layout_marginTop="3dp"
+                           		 android:layout_marginBottom="3dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="10dp"
+                                    app:srcCompat="@drawable/icon_info_calendar" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="67dp"
+                                    android:gravity="center|left"
+                                    android:text="정산주기" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/li_sv_calculate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center|left"
+                                android:maxLines="1"
+                                android:text="D+1(영업일 기준)"
+                                android:textColor="@color/infocolor"
+                                android:textSize="13dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="서비스 구분"
+                        android:textColor="#344356"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.05"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:fontFamily="@font/notosanskr"/>
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/toggle_service_1"
+                                android:layout_width="154dp"
+                                android:layout_height="53dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0"
+                                android:background="@drawable/toggle_service_1"
+                                android:button="@null"
+                                android:onClick="onClickService1" />
+
+                            <CheckBox
+                                android:id="@+id/toggle_service_2"
+                                android:layout_width="154dp"
+                                android:layout_height="53dp"
+                                android:layout_weight="0"
+                                android:background="@drawable/toggle_service_2"
+                                android:button="@null"
+                                android:onClick="onClickService2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/toggle_service_3"
+                                android:layout_width="154dp"
+                                android:layout_height="53dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="0"
+                                android:background="@drawable/toggle_service_3"
+                                android:button="@null"
+                                android:onClick="onClickService3" />
+
+                            <CheckBox
+                                android:id="@+id/toggle_service_4"
+                                android:layout_width="154dp"
+                                android:layout_height="53dp"
+                                android:layout_weight="0"
+                                android:background="@drawable/toggle_service_4"
+                                android:button="@null"
+                                android:onClick="onClickService4" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="결제수단(중복선택가능)"
+                        android:textColor="#344356"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.05"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:fontFamily="@font/notosanskr"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/li_terminal_1"
+                            android:layout_width="100dp"
+                            android:layout_height="140dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/toggle_payment_1"
+                            android:button="@null" />
+
+                        <CheckBox
+                            android:id="@+id/li_terminal_2"
+                            android:layout_width="100dp"
+                            android:layout_height="140dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/toggle_payment_2"
+                            android:onClick="onClickTerminal2"
+                            android:button="@null" />
+                        <CheckBox
+                            android:id="@+id/li_terminal_3"
+                            android:layout_width="100dp"
+                            android:layout_height="140dp"
+                            android:button="@null"
+                            android:background="@drawable/toggle_payment_3"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="89"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:onClick="goLiBasicFrm"
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:src="@drawable/find_btn_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

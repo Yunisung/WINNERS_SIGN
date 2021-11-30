@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contract.Li_AgreeActivity"
+    android:weightSum="624"
+    android:background="@drawable/background_color">
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_weight="53"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:onClick="back"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/top_back"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="[사업자] 계약서 작성"
+            android:textColor="@color/title"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:onClick="didTapContractHome"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/top_home" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="571"
+        android:orientation="vertical"
+        
+        android:weightSum="571">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="482"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="36dp"
+                        android:gravity="bottom|center">
+
+                        <TextView
+                            android:layout_width="307dp"
+                            android:layout_height="59dp"
+                            android:gravity="bottom"
+
+                            android:text="가맹점/개인정보 동의"
+                            android:textColor="@color/title"
+                            android:textSize="16sp" />
+                        <ImageView
+                            android:paddingTop="38dp"
+                            android:layout_width="21dp"
+                            android:layout_height="59dp"
+                            android:src="@drawable/icon_help"
+                            android:onClick="onClickHelp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="156dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="21dp"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="36dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="5dp"
+                            android:text="[가맹점/개인정보 수집, 이용에 관한 사항]"
+                            android:textColor="@color/text_03"
+                            android:textSize="13dp" />
+
+                        <WebView
+                            android:id="@+id/web1"
+                            android:layout_width="match_parent"
+                            android:layout_height="131dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="21dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/signName1"
+                            android:layout_width="156dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/name_input"
+                            android:gravity="center"
+                            android:hint="이름을 입력하세요."
+                            android:inputType="text"
+                            android:textColor="@color/input_color"
+                            android:textSize="13sp"
+                            android:layout_marginRight="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="156dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/name_input"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/icon_sign"
+                                android:paddingTop="8dp"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:onClick="sign1"
+                                android:text="(서명 또는 인)"
+                                android:textColor="@color/input_color"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/signPop1"
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:onClick="sign1"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="156dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="21dp"
+                        android:background="@color/info_background"
+                        android:orientation="vertical"
+                        android:paddingLeft="36dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="36dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="bottom|left"
+                            android:paddingBottom="5dp"
+                            android:text="[가맹점/개인정보 제공에 관한 사항]"
+                            android:textColor="@color/text_03"
+                            android:textSize="13dp" />
+
+                        <WebView
+                            android:id="@+id/web2"
+                            android:layout_width="match_parent"
+                            android:layout_height="131dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="328dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="21dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/signName2"
+                            android:layout_width="156dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/name_input"
+                            android:gravity="center"
+                            android:hint="이름을 입력하세요."
+                            android:inputType="text"
+                            android:textColor="@color/input_color"
+                            android:textSize="13sp" />
+                        <LinearLayout
+                            android:layout_width="156dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/name_input"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/icon_sign"
+                                android:paddingLeft="11dp"
+                                android:paddingTop="8dp"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/text2"
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:onClick="sign2"
+                                android:text="(서명 또는 인)"
+                                android:textColor="@color/input_color"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:id="@+id/signPop2"
+                                android:layout_width="98dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:onClick="sign2"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="89"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:onClick="goLiServiceFrm"
+                android:src="@drawable/find_btn_next" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

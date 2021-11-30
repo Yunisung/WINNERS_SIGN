@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="contract.hee.bukook">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- 네트워크 사용에 대한 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bukook"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name=".CameraActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".PhotoViewActivity"
+            android:screenOrientation="unspecified" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="contract.hee.bukook.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".mbinfo.UpdateInfoFinishPopup"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".find.FindPwFinishPopup"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".find.FindIdFinishPopup"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".ContractFinishPopup"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".join.JoinFinishPopup"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity android:name=".LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".contract.CancelPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".join.AgreeJoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FinishAppActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".LogoutPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".contract.NotPermissionPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".contract.RestartPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".contract.AlreadyPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".contract.Li_Before_FinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_Before_FinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DaumWebViewActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Animation.Dialog" />
+        <activity
+            android:name=".contract.MyContractCkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_MycontractActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_MycontractActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.FindPwFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.FindPwChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.FindPwActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.FindIdFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.FindIdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.SignPopupActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".contract.ContractFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_AgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_WriteBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_AddFilesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_WriteServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.Li_WriteBasicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_AgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_AddFilesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_ServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_WriteBasicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.In_WriteBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.NotConstractActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity
+            android:name=".mbinfo.UpdateInfoFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mbinfo.UpdateInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mbinfo.MyInfoPwCkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinFinish"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinCkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".join.JoinInputActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contract.ContractActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

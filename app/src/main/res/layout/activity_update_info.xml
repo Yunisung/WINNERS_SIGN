@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mbinfo.UpdateInfoActivity"
+    android:background="@drawable/background_color">
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_weight="53"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:onClick="back"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/top_back" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:text="나의 정보"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="#344356"
+            android:gravity="center"
+            android:fontFamily="@font/notosanskr"/>/>
+        <LinearLayout
+            android:onClick="didTapUpdateInfoHome"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/top_home" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="571"
+        android:orientation="vertical"
+        
+        android:weightSum="571">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="482"
+            android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="328dp"
+           android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center|top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:letterSpacing="0.05"
+                    android:paddingTop="6dp"
+                    android:text="변경 정보를 정확하게 입력해 주십시오."
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/notosanskr"/>
+
+                <ImageView
+                    android:layout_marginTop="6dp"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:src="@drawable/icon_help"
+                    android:onClick="onClickHelp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="26dp"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_basic"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_name" />
+
+                <TextView
+                    android:id="@+id/mb_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:id="@+id/id"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/input_basic"
+                android:paddingLeft="11dp">
+
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/person"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/mb_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="clickView"
+                android:id="@+id/pw"
+                android:layout_marginTop="18dp"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_basic"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/lock" />
+                <EditText
+                    android:id="@+id/mb_pw"
+                    android:inputType="textPassword"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:maxLength="12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:hint="새 비밀번호(4~12자 이내)"
+                    android:textColorHint="@color/input_color"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="clickView"
+                android:id="@+id/repwLy"
+                android:layout_marginTop="18dp"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_basic"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/lock" />
+                <EditText
+                    android:id="@+id/repw"
+                    android:inputType="textPassword"
+                    android:hint="비밀번호 확인"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:maxLength="12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"
+                    android:textColorHint="@color/input_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="clickView"
+                android:id="@+id/phone"
+                android:layout_marginTop="18dp"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_basic"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_mobile" />
+
+                <EditText
+                    android:id="@+id/mb_phone"
+                    android:inputType="number"
+                    android:hint="휴대폰번호(-없이 입력)"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"
+                    android:textColorHint="@color/input_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="clickView"
+                android:id="@+id/email"
+                android:layout_marginTop="18dp"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_basic"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/icon_mail" />
+
+                <EditText
+                    android:id="@+id/mb_email"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/input_color"
+                    android:gravity="center|left"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"
+                    android:textColorHint="@color/input_color"
+                    android:hint="이메일" />
+            </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="89"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:onClick="goUpdateFinishFrm"
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:src="@drawable/info_btn_go_finish"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".contract.NotConstractActivity"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:weightSum="200">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|bottom"
+            android:text="나의 계약서"
+            android:textColor="#555555"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="12dp"
+            android:gravity="center"
+            android:textColor="#555555"
+            android:text="등록된 계약서가 없습니다."
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="top|center">
+        <ImageView
+            android:onClick="closePopup"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:src="@drawable/btn_popup_close"/>
+        </LinearLayout>
+    </LinearLayout>

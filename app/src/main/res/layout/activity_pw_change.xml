@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".find.FindPwChangeActivity"
+    android:weightSum="624"
+    android:background="@drawable/background_color">
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="0dp"
+        android:layout_weight="53"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:onClick="back"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/top_back" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:text="비밀번호 변경"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="#344356"
+            android:gravity="center"
+            android:fontFamily="@font/notosanskr"/>
+
+        <LinearLayout
+            android:onClick="didTapFindPwHome"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/top_home" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="571"
+        android:orientation="vertical"
+
+        android:weightSum="571">
+
+        <LinearLayout
+            android:layout_width="328dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="482"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="307dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/notosanskr"
+                    android:layout_gravity="left"
+                    android:paddingTop="30dp"
+                    android:gravity="left"
+                    android:text="변경할 비밀번호를 입력해 주십시오."
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="50dp"
+                    android:paddingTop="30dp"
+                    android:src="@drawable/icon_help"
+                    android:onClick="onClickHelp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/updatePwLy"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/input_basic"
+                android:onClick="clickView"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/lock" />
+
+                <EditText
+                    android:id="@+id/updatePw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:hint="새 비밀번호(4~12자 이내)"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/input_color"
+                    android:textColorHint="@color/input_color"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/repwLy"
+                android:layout_width="328dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/input_basic"
+                android:onClick="clickView"
+                android:orientation="horizontal"
+                android:paddingLeft="11dp">
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center|left"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/lock" />
+
+                <EditText
+                    android:id="@+id/repw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:hint="비밀번호 확인"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:textColor="@color/input_color"
+                    android:textColorHint="#555555"
+                    android:textSize="13dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/notosanskr" />
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="89"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:onClick="goFinishPwFrm"
+                android:layout_width="350dp"
+                android:layout_height="72dp"
+                android:src="@drawable/info_btn_go_finish"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

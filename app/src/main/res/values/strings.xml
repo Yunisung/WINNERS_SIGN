@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">위너스사인</string>
+    <string name="join_frm">가입하기</string>
+    <string name="info_pwck_frm">비밀번호 찾기</string>
+    <string name="bank_text_1">상기 정산계좌가 본인의 개인상 사정으로 위임 계좌일 경우 <b>이와 관련한  세금을 책임질것을 확약하며, 본 신청서를 제출합니다.</b><p>(상기 계좌로 본인의 인건비 및 각종 수당을 지급하여 주시기를 </p> 신청합니다.)</string>
+    <string name="bank_text_2">본 서비스는 여신전문금융업법 제 19조에 의거 결제대행업체에서 제공되는 전자지불대행서비스이며, 본계약으로 발생된 매출은 개인 간 거래 신청자(을)에게 <b>매출 신고 및 납세의 의무</b>가 있습니다.
+        \n<![CDATA[※]]> 개인 간 거래 신청자(을)는 본 서비스를 이용하여 매출누락 등 조세법 위반 시 위 계약은 <b>자동 해지</b>되며, 전표 유통, 현금유통, 카드깡 등 불법적으로 사용시 모든 <b>손해배상 및 민<![CDATA[·]]>형사상의 책임</b>이 있습니다.</string>
+
+    <string name="chargeValue">3.5%</string>
+    <string name="chargeString">3.5%(부과세별도)</string>
+
+    <string name="agreementDate">1년</string>
+    <string name="monthPrice">11,000</string>
+    <string name="yearPrice">132,000</string>
+    <string name="terminalPrice">3,000</string>
+</resources>
