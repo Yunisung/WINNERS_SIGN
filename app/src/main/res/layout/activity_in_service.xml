@@ -138,7 +138,7 @@
 								android:layout_gravity="center"
 								android:gravity="center|left"
 								android:maxLines="1"
-								android:text="부국위너스 주식회사"
+								android:text="건흥페이먼츠 주식회사"
 								android:textColor="@color/infocolor" />
 						</LinearLayout>
 						<LinearLayout
