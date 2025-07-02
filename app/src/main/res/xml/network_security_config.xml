@@ -2,7 +2,7 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true"/>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">winnerssign.bkwinners.kr</domain>
+        <domain includeSubdomains="true">winnerssign.ghpayments.kr</domain>
         <trust-anchors>
             <certificates src="@raw/bkwinners_kr_cert"/>
         </trust-anchors>
