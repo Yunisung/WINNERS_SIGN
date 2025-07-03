@@ -595,39 +595,33 @@ public class Li_AddFilesActivity extends HomeActivity {
                 Bitmap resizeBitmap = commonFile.resizeBitmap(bitmap);
                 resizeBitmap = commonFile.makeTempFile(file, resizeBitmap);
 
-                switch (imgId) {
-                    case R.id.li_btnIdentification_ca: //신분증
-                        isCamera1 = true;
-                        IMG_PATH1 = currentPhotoPath;
-                        imgIdentification = findViewById(R.id.imgIdentification);
-                        imgIdentification.setImageBitmap(resizeBitmap);
-                        sign1 = "Y";
-                        fileNamepng1 = currentFileName;
-                        setImg = false;
-                        fileUp(fileNamepng1, "3");
-
-                        break;
-                    case R.id.li_btnBankbook_ca: //통장사본
-                        isCamera2 = true;
-                        IMG_PATH2 = currentPhotoPath;
-                        imgBankbook = findViewById(R.id.imgBankbook);
-                        imgBankbook.setImageBitmap(resizeBitmap);
-                        sign2 = "Y";
-                        fileNamepng2 = currentFileName;
-                        setImg = false;
-                        fileUp(fileNamepng2, "4");
-
-                        break;
-                    case R.id.bs_num_ca: //사업자등록증
-                        isCamera3 = true;
-                        IMG_PATH3 = currentPhotoPath;
-                        imgLicense = findViewById(R.id.imgLicense);
-                        imgLicense.setImageBitmap(resizeBitmap);
-                        sign3 = "Y";
-                        fileNamepng3 = currentFileName;
-                        setImg = false;
-                        fileUp(fileNamepng3, "5");
-                        break;
+                if(imgId == R.id.li_btnIdentification_ca) {
+                    isCamera1 = true;
+                    IMG_PATH1 = currentPhotoPath;
+                    imgIdentification = findViewById(R.id.imgIdentification);
+                    imgIdentification.setImageBitmap(resizeBitmap);
+                    sign1 = "Y";
+                    fileNamepng1 = currentFileName;
+                    setImg = false;
+                    fileUp(fileNamepng1, "3");
+                } else if(imgId == R.id.li_btnBankbook_ca) {
+                    isCamera2 = true;
+                    IMG_PATH2 = currentPhotoPath;
+                    imgBankbook = findViewById(R.id.imgBankbook);
+                    imgBankbook.setImageBitmap(resizeBitmap);
+                    sign2 = "Y";
+                    fileNamepng2 = currentFileName;
+                    setImg = false;
+                    fileUp(fileNamepng2, "4");
+                } else if(imgId == R.id.bs_num_ca) {
+                    isCamera3 = true;
+                    IMG_PATH3 = currentPhotoPath;
+                    imgLicense = findViewById(R.id.imgLicense);
+                    imgLicense.setImageBitmap(resizeBitmap);
+                    sign3 = "Y";
+                    fileNamepng3 = currentFileName;
+                    setImg = false;
+                    fileUp(fileNamepng3, "5");
                 }
             }
         }
@@ -654,35 +648,30 @@ public class Li_AddFilesActivity extends HomeActivity {
                 resizeBitmap = commonFile.makeTempFile(tempFile,resizeBitmap);
 
                 if(bitmap!=null) {
-                    switch (imgId) {
-                        case R.id.li_btnIdentification_ga:
-                            imgIdentification = findViewById(R.id.imgIdentification);
-                            imgIdentification.setImageBitmap(resizeBitmap);
-                            sign1="Y";
-                            fileNamepng1 = fileNamepng;
-                            setImg=false;
-                            fileUp(fileNamepng1, "3");
-                            break;
-                        case R.id.li_btnBankbook_ga:
-                            imgBankbook = findViewById(R.id.imgBankbook);
-                            imgBankbook.setImageBitmap(resizeBitmap);
-                            sign2="Y";
-                            fileNamepng2 = fileNamepng;
-                            setImg=false;
-                            fileUp(fileNamepng2, "4");
-                            break;
-                        case R.id.bs_num_ga:
-                            imgLicense = findViewById(R.id.imgLicense);
-                            imgLicense.setImageBitmap(resizeBitmap);
-                            sign3="Y";
-                            fileNamepng3= fileNamepng;
-                            setImg=false;
-                            fileUp(fileNamepng3, "5");
-                            break;
-                    }//switch
+                    if(imgId == R.id.li_btnIdentification_ga) {
+                        imgIdentification = findViewById(R.id.imgIdentification);
+                        imgIdentification.setImageBitmap(resizeBitmap);
+                        sign1="Y";
+                        fileNamepng1 = fileNamepng;
+                        setImg=false;
+                        fileUp(fileNamepng1, "3");
+                    } else if(imgId == R.id.li_btnBankbook_ga) {
+                        imgBankbook = findViewById(R.id.imgBankbook);
+                        imgBankbook.setImageBitmap(resizeBitmap);
+                        sign2="Y";
+                        fileNamepng2 = fileNamepng;
+                        setImg=false;
+                        fileUp(fileNamepng2, "4");
+                    } else if(imgId == R.id.bs_num_ga) {
+                        imgLicense = findViewById(R.id.imgLicense);
+                        imgLicense.setImageBitmap(resizeBitmap);
+                        sign3="Y";
+                        fileNamepng3= fileNamepng;
+                        setImg=false;
+                        fileUp(fileNamepng3, "5");
+                    }
                 }
             }//RESULT_OK if
         }//IMG_CODE
     }//onActivityResult
-
-}//end
+}

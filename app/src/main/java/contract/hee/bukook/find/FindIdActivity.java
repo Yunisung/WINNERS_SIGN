@@ -282,19 +282,15 @@ public class FindIdActivity extends AppCompatActivity {
         return super.dispatchTouchEvent(ev);
     }
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.nameLy:
-                name.requestFocus();
-                manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.emailLy:
-                phone.requestFocus();
-                manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.numLy:
-                phone_num.requestFocus();
-                manager.showSoftInput(phone_num, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.nameLy) {
+            name.requestFocus();
+            manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.emailLy) {
+            phone.requestFocus();
+            manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.numLy) {
+            phone_num.requestFocus();
+            manager.showSoftInput(phone_num, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 }

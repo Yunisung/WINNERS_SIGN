@@ -365,42 +365,37 @@ public class In_AgreeActivity extends HomeActivity {
                 String getfileName = data.getExtras().get("fileName").toString();
                 Bitmap sign = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                 if(SignDrow.isDrow()!=1){
-                    switch (id){
-                        case R.id.signPop1:
-                            text1.setVisibility(View.VISIBLE);
-                            signPop1.setVisibility(View.GONE);
-                            sign1=null;
-                            break;
-                        case R.id.signPop2:
-                            text2.setVisibility(View.VISIBLE);
-                            signPop2.setVisibility(View.GONE);
-                            sign2=null;
-                            break;
+                    if(id == R.id.signPop1) {
+                        text1.setVisibility(View.VISIBLE);
+                        signPop1.setVisibility(View.GONE);
+                        sign1=null;
+                    } else if(id == R.id.signPop2) {
+                        text2.setVisibility(View.VISIBLE);
+                        signPop2.setVisibility(View.GONE);
+                        sign2 = null;
                     }
                     return;
                 }
-                switch (id) {
-                    case R.id.signPop1:
-                        signPop1 = findViewById(R.id.signPop1);
-                        signPop1.setImageBitmap(sign);
-                        fileName[0] = getfileName;
-                        fi_group[0] = "1";
-                        sign1=sign.toString();
-                        //성공시
-                        text1.setVisibility(View.GONE);
-                        signPop1.setVisibility(View.VISIBLE);
-                        signName2.requestFocus();
-                        break;
-                    case R.id.signPop2:
-                        signPop2 = findViewById(R.id.signPop2);
-                        signPop2.setImageBitmap(sign);
-                        fileName[1] = getfileName;
-                        fi_group[1] = "2";
-                        sign2=sign.toString();
-                        //성공시
-                        text2.setVisibility(View.GONE);
-                        signPop2.setVisibility(View.VISIBLE);
-                        break;
+
+                if(id == R.id.signPop1) {
+                    signPop1 = findViewById(R.id.signPop1);
+                    signPop1.setImageBitmap(sign);
+                    fileName[0] = getfileName;
+                    fi_group[0] = "1";
+                    sign1=sign.toString();
+                    //성공시
+                    text1.setVisibility(View.GONE);
+                    signPop1.setVisibility(View.VISIBLE);
+                    signName2.requestFocus();
+                } else if(id == R.id.signPop2) {
+                    signPop2 = findViewById(R.id.signPop2);
+                    signPop2.setImageBitmap(sign);
+                    fileName[1] = getfileName;
+                    fi_group[1] = "2";
+                    sign2=sign.toString();
+                    //성공시
+                    text2.setVisibility(View.GONE);
+                    signPop2.setVisibility(View.VISIBLE);
                 }
             }
         }

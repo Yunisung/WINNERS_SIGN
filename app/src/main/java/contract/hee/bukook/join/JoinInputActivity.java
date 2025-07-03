@@ -426,35 +426,27 @@ public class JoinInputActivity extends AppCompatActivity {
 
 
     public void clickView(View v){
-        switch (v.getId()){
-            case R.id.name:
-                name.requestFocus();
-                manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.id:
-                id.requestFocus();
-                manager.showSoftInput(id, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.pw:
-                pw.requestFocus();
-                manager.showSoftInput(pw, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.repwLy:
-                repw.requestFocus();
-                manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.phone:
-                phone.requestFocus();
-                manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.email:
-                email.requestFocus();
-                manager.showSoftInput(email, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.num:
-                phone_Num.requestFocus();
-                manager.showSoftInput(phone_Num, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.name) {
+            name.requestFocus();
+            manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.id) {
+            id.requestFocus();
+            manager.showSoftInput(id, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.pw) {
+            pw.requestFocus();
+            manager.showSoftInput(pw, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.repwLy) {
+            repw.requestFocus();
+            manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.phone) {
+            phone.requestFocus();
+            manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.email) {
+            email.requestFocus();
+            manager.showSoftInput(email, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.num) {
+            phone_Num.requestFocus();
+            manager.showSoftInput(phone_Num, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 

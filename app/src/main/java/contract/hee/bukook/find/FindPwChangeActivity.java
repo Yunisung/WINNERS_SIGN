@@ -154,15 +154,12 @@ public class FindPwChangeActivity extends HomeActivity {
         return super.dispatchTouchEvent(ev);
     }
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.updatePwLy:
-                updatePw.requestFocus();
-                manager.showSoftInput(updatePw, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.repwLy:
-                repw.requestFocus();
-                manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.updatePwLy) {
+            updatePw.requestFocus();
+            manager.showSoftInput(updatePw, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.repwLy) {
+            repw.requestFocus();
+            manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 

@@ -188,14 +188,12 @@ public class Li_WriteBasicActivity extends HomeActivity {
        String li_bs_divide="";
         if(nullCk()) {
             HashMap<String, String> map = new HashMap<>();
-            switch (radioBtnId){
-                case R.id.li_bs_divide_1:
-                    li_bs_divide="1";
-                    break;
-                case R.id.li_bs_divide_2:
-                    li_bs_divide="2";
-                    break;
+            if(radioBtnId == R.id.li_bs_divide_1) {
+                li_bs_divide="1";
+            } else if(radioBtnId == R.id.li_bs_divide_2) {
+                li_bs_divide="2";
             }
+
             progressDialog.show();
             map.put("li_idnum", SessionMb.mb_idnum);
             map.put("li_seq", li.getLi_seq());
@@ -433,49 +431,37 @@ public class Li_WriteBasicActivity extends HomeActivity {
 
 
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.company:
-                li_company.requestFocus();
-                manager.showSoftInput(li_company, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.bsnum:
-                li_bs_num.requestFocus();
-                manager.showSoftInput(li_bs_num, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.tel:
-                li_tel.requestFocus();
-                manager.showSoftInput(li_tel, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.cindition:
-                li_cindition.requestFocus();
-                manager.showSoftInput(li_cindition, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.event:
-                li_event.requestFocus();
-                manager.showSoftInput(li_event, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.addr2:
-                li_addr2.requestFocus();
-                manager.showSoftInput(li_addr2, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.rename:
-                li_re_name.requestFocus();
-                manager.showSoftInput(li_re_name, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.rebirth:
-                li_re_birth.requestFocus();
-                manager.showSoftInput(li_re_birth, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.rephone:
-                li_re_phone.requestFocus();
-                manager.showSoftInput(li_re_phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.reemail:
-                li_re_email.requestFocus();
-                manager.showSoftInput(li_re_email, InputMethodManager.SHOW_IMPLICIT);
-                break;
 
-
+        if(v.getId() == R.id.company) {
+            li_company.requestFocus();
+            manager.showSoftInput(li_company, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.bsnum) {
+            li_bs_num.requestFocus();
+            manager.showSoftInput(li_bs_num, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.tel) {
+            li_tel.requestFocus();
+            manager.showSoftInput(li_tel, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.cindition) {
+            li_cindition.requestFocus();
+            manager.showSoftInput(li_cindition, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.event) {
+            li_event.requestFocus();
+            manager.showSoftInput(li_event, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.addr2) {
+            li_addr2.requestFocus();
+            manager.showSoftInput(li_addr2, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.rename) {
+            li_re_name.requestFocus();
+            manager.showSoftInput(li_re_name, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.rebirth) {
+            li_re_birth.requestFocus();
+            manager.showSoftInput(li_re_birth, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.rephone) {
+            li_re_phone.requestFocus();
+            manager.showSoftInput(li_re_phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.reemail) {
+            li_re_email.requestFocus();
+            manager.showSoftInput(li_re_email, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 }

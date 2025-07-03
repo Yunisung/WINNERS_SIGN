@@ -279,23 +279,18 @@ public class UpdateInfoActivity extends HomeActivity {
         return super.dispatchTouchEvent(ev);
     }
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.pw:
-                pw.requestFocus();
-                manager.showSoftInput(pw, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.repwLy:
-                repw.requestFocus();
-                manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.phone:
-                phone.requestFocus();
-                manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.email:
-                email.requestFocus();
-                manager.showSoftInput(email, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.pw) {
+            pw.requestFocus();
+            manager.showSoftInput(pw, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.repwLy) {
+            repw.requestFocus();
+            manager.showSoftInput(repw, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.phone) {
+            phone.requestFocus();
+            manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.email) {
+            email.requestFocus();
+            manager.showSoftInput(email, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 }

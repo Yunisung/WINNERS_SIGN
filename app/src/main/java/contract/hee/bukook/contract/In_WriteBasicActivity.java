@@ -327,35 +327,27 @@ public class In_WriteBasicActivity extends HomeActivity {
         return super.dispatchTouchEvent(ev);
     }
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.nameLy:
-                name.requestFocus();
-                manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.companyLy:
-                company.requestFocus();
-                manager.showSoftInput(company, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.phoneLy:
-                phone.requestFocus();
-                manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.rrnLy:
-                rrn.requestFocus();
-                manager.showSoftInput(rrn, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.itemLy:
-                item.requestFocus();
-                manager.showSoftInput(item, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.addr2Ly:
-                addr2.requestFocus();
-                manager.showSoftInput(addr2, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.telLy:
-                tel.requestFocus();
-                manager.showSoftInput(tel, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.nameLy) {
+            name.requestFocus();
+            manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.companyLy) {
+            company.requestFocus();
+            manager.showSoftInput(company, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.phoneLy) {
+            phone.requestFocus();
+            manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.rrnLy) {
+            rrn.requestFocus();
+            manager.showSoftInput(rrn, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.itemLy) {
+            item.requestFocus();
+            manager.showSoftInput(item, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.addr2Ly) {
+            addr2.requestFocus();
+            manager.showSoftInput(addr2, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.telLy) {
+            tel.requestFocus();
+            manager.showSoftInput(tel, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 }

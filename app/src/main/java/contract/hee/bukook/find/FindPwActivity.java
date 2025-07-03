@@ -294,23 +294,18 @@ public class FindPwActivity extends AppCompatActivity {
     }
 
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.nameLy:
-                name.requestFocus();
-                manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.idLy:
-                id.requestFocus();
-                manager.showSoftInput(id, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.emailLy:
-                phone.requestFocus();
-                manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.numLy:
-                phone_num.requestFocus();
-                manager.showSoftInput(phone_num, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.nameLy) {
+            name.requestFocus();
+            manager.showSoftInput(name, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.idLy) {
+            id.requestFocus();
+            manager.showSoftInput(id, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.emailLy) {
+            phone.requestFocus();
+            manager.showSoftInput(phone, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.numLy) {
+            phone_num.requestFocus();
+            manager.showSoftInput(phone_num, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 

@@ -459,27 +459,26 @@ public class In_AddFilesActivity extends HomeActivity {
                 Bitmap resizeBitmap = commonFile.resizeBitmap(bitmap);
                 resizeBitmap = commonFile.makeTempFile(file, resizeBitmap);
 
-                switch (imgId) {
-                    case R.id.btnIdentification_ca: //신분증
-                        isCamera1 = true;
-                        IMG_PATH1 = currentPhotoPath;
-                        imgIdentification = findViewById(R.id.imgIdentification);
-                        imgIdentification.setImageBitmap(resizeBitmap);
-                        sign1="Y";
-                        fileNamepng1 = currentFileName;
-                        isSetImg=true;
-                        fileUp(fileNamepng1, "3");
-                        break;
-                    case R.id.btnBankbook_ca: //통장사본
-                        isCamera2 = true;
-                        IMG_PATH2 = currentPhotoPath;
-                        imgBankbook = findViewById(R.id.imgBankbook);
-                        imgBankbook.setImageBitmap(resizeBitmap);
-                        sign2="Y";
-                        fileNamepng2= currentFileName;
-                        isSetImg=true;
-                        fileUp(fileNamepng2, "4");
-                        break;
+                if (imgId == R.id.btnIdentification_ca) {
+                    //신분증
+                    isCamera1 = true;
+                    IMG_PATH1 = currentPhotoPath;
+                    imgIdentification = findViewById(R.id.imgIdentification);
+                    imgIdentification.setImageBitmap(resizeBitmap);
+                    sign1="Y";
+                    fileNamepng1 = currentFileName;
+                    isSetImg=true;
+                    fileUp(fileNamepng1, "3");
+                } else if(imgId == R.id.btnBankbook_ca) {
+                    //통장사본
+                    isCamera2 = true;
+                    IMG_PATH2 = currentPhotoPath;
+                    imgBankbook = findViewById(R.id.imgBankbook);
+                    imgBankbook.setImageBitmap(resizeBitmap);
+                    sign2="Y";
+                    fileNamepng2= currentFileName;
+                    isSetImg=true;
+                    fileUp(fileNamepng2, "4");
                 }
             }
         }
@@ -514,24 +513,21 @@ public class In_AddFilesActivity extends HomeActivity {
                     //1. 내부저장소(캐시)에 먼저 저장한다.
                     resizeBitmap = commonFile.makeTempFile(tempFile,resizeBitmap);
                     if(resizeBitmap!=null) {
-                        switch (imgId) {
-                            case R.id.btnIdentification_ga:
-                                imgIdentification = findViewById(R.id.imgIdentification);
-                                imgIdentification.setImageBitmap(resizeBitmap);
-                                sign1="Y";
-                                fileNamepng1 = fileNamepng;
-                                isSetImg=true;
-                                fileUp(fileNamepng1, "3");
-                                break;
-                            case R.id.btnBankbook_ga:
-                                imgBankbook = findViewById(R.id.imgBankbook);
-                                imgBankbook.setImageBitmap(resizeBitmap);
-                                sign2="Y";
-                                fileNamepng2 = fileNamepng;
-                                isSetImg=true;
-                                fileUp(fileNamepng2, "4");
-                                break;
-                        }//switch
+                        if(imgId == R.id.btnIdentification_ga) {
+                            imgIdentification = findViewById(R.id.imgIdentification);
+                            imgIdentification.setImageBitmap(resizeBitmap);
+                            sign1="Y";
+                            fileNamepng1 = fileNamepng;
+                            isSetImg=true;
+                            fileUp(fileNamepng1, "3");
+                        } else if(imgId == R.id.btnBankbook_ga) {
+                            imgBankbook = findViewById(R.id.imgBankbook);
+                            imgBankbook.setImageBitmap(resizeBitmap);
+                            sign2="Y";
+                            fileNamepng2 = fileNamepng;
+                            isSetImg=true;
+                            fileUp(fileNamepng2, "4");
+                        }
                     }
                 }
 

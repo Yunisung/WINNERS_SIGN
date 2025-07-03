@@ -364,15 +364,14 @@ public class In_WriteBankActivity extends HomeActivity {
                     signPop1.setVisibility(View.GONE);
                     return;
                 }
-                switch (id) {
-                    case R.id.signPop1:
-                        signPop1.setImageBitmap(sign);
-                        fileName = getfileName;
-                        fi_group = "7";
-                        //성공시
-                        findViewById(R.id.text1).setVisibility(View.GONE);
-                        signPop1.setVisibility(View.VISIBLE);
-                        break;
+
+                if(id == R.id.signPop1) {
+                    signPop1.setImageBitmap(sign);
+                    fileName = getfileName;
+                    fi_group = "7";
+                    //성공시
+                    findViewById(R.id.text1).setVisibility(View.GONE);
+                    signPop1.setVisibility(View.VISIBLE);
                 }
             }
         }
@@ -398,15 +397,12 @@ public class In_WriteBankActivity extends HomeActivity {
         return super.dispatchTouchEvent(ev);
     }
     public void clickView(View v) {
-        switch (v.getId()) {
-            case R.id.banknum:
-                bank_num.requestFocus();
-                manager.showSoftInput(bank_num, InputMethodManager.SHOW_IMPLICIT);
-                break;
-            case R.id.depositorLy:
-                depositor.requestFocus();
-                manager.showSoftInput(depositor, InputMethodManager.SHOW_IMPLICIT);
-                break;
+        if(v.getId() == R.id.banknum) {
+            bank_num.requestFocus();
+            manager.showSoftInput(bank_num, InputMethodManager.SHOW_IMPLICIT);
+        } else if(v.getId() == R.id.depositorLy) {
+            depositor.requestFocus();
+            manager.showSoftInput(depositor, InputMethodManager.SHOW_IMPLICIT);
         }
     }
 }
