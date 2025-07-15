@@ -11,8 +11,8 @@ android {
         testApplicationId "contract.hee.bukook.test"
         targetSdkVersion 35
         minSdkVersion 14
-        versionCode 21
-        versionName "21.0"
+        versionCode 22
+        versionName "22.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

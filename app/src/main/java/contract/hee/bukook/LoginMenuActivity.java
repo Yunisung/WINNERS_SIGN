@@ -94,7 +94,7 @@ public class LoginMenuActivity extends AppCompatActivity {
 
     //마루페이
     public void goMaruPay(View v) {
-        String url = "https://marupay.kr/login/Login";
+        String url = "https://sugi.ghpayments.kr";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
